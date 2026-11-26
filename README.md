@@ -38,7 +38,8 @@ Every connection is tagged **local**, **staging** or **production**, and product
 ## Install
 
 1. Download the `.dmg` from the [latest release](https://github.com/yethusoe91/Sluice-releases/releases/latest) and drag **Sluice** into Applications.
-2. The first time, **right-click Sluice → Open**. Builds aren't notarized by Apple yet, so macOS asks once.
+2. Open it once. Builds aren't notarized by Apple yet, so macOS says it can't verify the app.
+3. Go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to Sluice, then confirm. You only do this once; updates installed by Sluice itself don't ask again.
 
 One universal app for Apple Silicon and Intel Macs.
 
@@ -49,5 +50,5 @@ Sluice checks this repo for a new version at launch (at most every 12 hours) and
 ## Privacy
 
 - No analytics, tracking or crash reporting.
-- The only automatic network request is the update check to GitHub.
+- Apart from connecting to your own databases, the only network request Sluice makes is the update check to GitHub.
 - **Ask AI** is off until you use it. It sends table, column and function names, types, keys, approximate row counts, your request and the SQL in the editor to Claude through your own Claude Code. It never sends rows, passwords or connection details.
