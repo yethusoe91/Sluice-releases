@@ -33,6 +33,7 @@ Every connection is tagged **local**, **staging** or **production**, and product
 - **Query editor** with autocomplete, Explain, charts, saved queries and history
 - **Exact values**: 64-bit integers and `DECIMAL(65,30)` are never rounded
 - **SSH tunnels and TLS** (remote hosts verify certificates by default), passwords in an encrypted vault keyed by the macOS keychain or GNOME Keyring
+- **Query builder**: pick a table, joins, columns and filters, and Sluice writes the SELECT, no AI needed
 - **Ask AI** (optional): describe a query and your own Claude Code writes the SQL
 
 ## Install
@@ -56,10 +57,10 @@ Saved passwords need a Secret Service keyring, such as GNOME Keyring, which Ubun
 
 ## Updates
 
-Sluice checks this repo for a new version at launch (at most every 12 hours) and from **Sluice → Check for Updates…**. It shows the release notes and installs only after you confirm. Updates are signed: Sluice refuses any update not signed with its own key. You can turn the launch check off in the update dialog.
+If you allow it on first launch, Sluice checks this repo for a new version at launch (at most every 12 hours) and from **Sluice → Check for Updates…**. It shows the release notes and installs only after you confirm. Updates are signed: Sluice refuses any update not signed with its own key. You can turn the launch check off in the update dialog.
 
 ## Privacy
 
 - No analytics, tracking or crash reporting.
-- Apart from connecting to your own databases, the only network request Sluice makes is the update check to GitHub.
+- Apart from connecting to your own databases, the only network request Sluice makes is the update check to GitHub, and only after you allow it: Sluice asks once on first launch and contacts nothing until you answer.
 - **Ask AI** is off until you use it. It sends table, column and function names, types, keys, approximate row counts, your request and the SQL in the editor to Claude through your own Claude Code. It never sends rows, passwords or connection details.
