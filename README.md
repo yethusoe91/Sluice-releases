@@ -35,6 +35,7 @@ Every connection is tagged **local**, **staging** or **production**, and product
 - **SSH tunnels and TLS** (remote hosts verify certificates by default), passwords in an encrypted vault keyed by the macOS keychain or GNOME Keyring
 - **Query builder**: pick a table, joins, columns and filters, and Sluice writes the SELECT, no AI needed
 - **Ask AI** (optional): describe a query and your own Claude Code writes the SQL
+- **Native look**: Mac system fonts, neutral light and dark themes, and a sidebar in two columns or one tree
 
 ## Install
 
