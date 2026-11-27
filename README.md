@@ -4,7 +4,7 @@
 A fast desktop database client that knows which server is production.</p>
 
 <p align="center">
-  <a href="https://github.com/yethusoe91/Sluice-releases/releases/latest"><b>Download for macOS</b></a>
+  <a href="https://github.com/yethusoe91/Sluice-releases/releases/latest"><b>Download for macOS and Linux</b></a>
   ·
   <a href="https://github.com/yethusoe91/Sluice-releases/releases">Release notes</a>
 </p>
@@ -32,16 +32,27 @@ Every connection is tagged **local**, **staging** or **production**, and product
 - **ER diagrams**, **schema compare** with migration SQL, and **server activity**
 - **Query editor** with autocomplete, Explain, charts, saved queries and history
 - **Exact values**: 64-bit integers and `DECIMAL(65,30)` are never rounded
-- **SSH tunnels and TLS** (remote hosts verify certificates by default), passwords in an encrypted vault keyed by the macOS keychain
+- **SSH tunnels and TLS** (remote hosts verify certificates by default), passwords in an encrypted vault keyed by the macOS keychain or GNOME Keyring
 - **Ask AI** (optional): describe a query and your own Claude Code writes the SQL
 
 ## Install
+
+### macOS
 
 1. Download the `.dmg` from the [latest release](https://github.com/yethusoe91/Sluice-releases/releases/latest) and drag **Sluice** into Applications.
 2. Open it once. Builds aren't notarized by Apple yet, so macOS says it can't verify the app.
 3. Go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to Sluice, then confirm. You only do this once; updates installed by Sluice itself don't ask again.
 
 One universal app for Apple Silicon and Intel Macs.
+
+### Linux (beta)
+
+For x86_64, Ubuntu 22.04 or newer (other distributions with the same libraries should work too). From the [latest release](https://github.com/yethusoe91/Sluice-releases/releases/latest), pick one:
+
+- **.deb** (Ubuntu, Debian): `sudo apt install ./Sluice_<version>_amd64.deb`, then open Sluice from your applications.
+- **AppImage** (any distribution): `chmod +x Sluice_<version>_amd64.AppImage`, then run it. Ubuntu 24.04 needs `sudo apt install libfuse2t64` for AppImages.
+
+Saved passwords need a Secret Service keyring, such as GNOME Keyring, which Ubuntu Desktop has. Shortcuts use Ctrl instead of ⌘. Linux support is new: please report anything that looks wrong.
 
 ## Updates
 
